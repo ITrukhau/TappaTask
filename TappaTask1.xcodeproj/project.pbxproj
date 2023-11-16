@@ -10,6 +10,10 @@
 		2A6389FE2B062D26007BB425 /* WATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6389FC2B062D26007BB425 /* WATableViewCell.swift */; };
 		2A6389FF2B062D26007BB425 /* WATableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6389FD2B062D26007BB425 /* WATableViewCell.xib */; };
 		2A638A022B062EEE007BB425 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A012B062EEE007BB425 /* UITableViewCell+Identifier.swift */; };
+		2A638A0A2B062FFE007BB425 /* WAListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A092B062FFE007BB425 /* WAListViewModel.swift */; };
+		2A638A0D2B0630AA007BB425 /* WACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A0C2B0630AA007BB425 /* WACoordinator.swift */; };
+		2A638A102B0630C0007BB425 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A0F2B0630C0007BB425 /* Coordinator.swift */; };
+		2A638A122B0631B2007BB425 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A112B0631B2007BB425 /* AppCoordinator.swift */; };
 		2A9186EE2B062C0E000E3AEF /* WAListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9186EC2B062C0E000E3AEF /* WAListViewController.swift */; };
 		2A9186EF2B062C0E000E3AEF /* WAListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A9186ED2B062C0E000E3AEF /* WAListViewController.xib */; };
 		2AB23D742B0628E20018AD27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB23D732B0628E20018AD27 /* AppDelegate.swift */; };
@@ -23,6 +27,10 @@
 		2A6389FC2B062D26007BB425 /* WATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATableViewCell.swift; sourceTree = "<group>"; };
 		2A6389FD2B062D26007BB425 /* WATableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WATableViewCell.xib; sourceTree = "<group>"; };
 		2A638A012B062EEE007BB425 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
+		2A638A092B062FFE007BB425 /* WAListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAListViewModel.swift; sourceTree = "<group>"; };
+		2A638A0C2B0630AA007BB425 /* WACoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACoordinator.swift; sourceTree = "<group>"; };
+		2A638A0F2B0630C0007BB425 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2A638A112B0631B2007BB425 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		2A9186EC2B062C0E000E3AEF /* WAListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAListViewController.swift; sourceTree = "<group>"; };
 		2A9186ED2B062C0E000E3AEF /* WAListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WAListViewController.xib; sourceTree = "<group>"; };
 		2AB23D702B0628E20018AD27 /* TappaTask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TappaTask1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +73,51 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2A638A082B062FEE007BB425 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2A638A092B062FFE007BB425 /* WAListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2A638A0B2B063096007BB425 /* WAList */ = {
+			isa = PBXGroup;
+			children = (
+				2A638A082B062FEE007BB425 /* ViewModel */,
+				2A9186F02B062C21000E3AEF /* View */,
+			);
+			path = WAList;
+			sourceTree = "<group>";
+		};
+		2A638A0E2B0630B1007BB425 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2A638A0F2B0630C0007BB425 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2A638A132B0634E5007BB425 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2AB23D732B0628E20018AD27 /* AppDelegate.swift */,
+				2A638A112B0631B2007BB425 /* AppCoordinator.swift */,
+				2AB23D752B0628E20018AD27 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2A638A152B06366B007BB425 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2AB23D7C2B0628E30018AD27 /* Assets.xcassets */,
+				2AB23D7E2B0628E30018AD27 /* LaunchScreen.storyboard */,
+				2AB23D812B0628E30018AD27 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2A9186EA2B062BD2000E3AEF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,7 +129,8 @@
 		2A9186EB2B062BD8000E3AEF /* WeatherAlert */ = {
 			isa = PBXGroup;
 			children = (
-				2A9186F02B062C21000E3AEF /* View */,
+				2A638A0C2B0630AA007BB425 /* WACoordinator.swift */,
+				2A638A0B2B063096007BB425 /* WAList */,
 			);
 			path = WeatherAlert;
 			sourceTree = "<group>";
@@ -84,9 +138,9 @@
 		2A9186F02B062C21000E3AEF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2A6389FB2B062D0E007BB425 /* Components */,
 				2A9186EC2B062C0E000E3AEF /* WAListViewController.swift */,
 				2A9186ED2B062C0E000E3AEF /* WAListViewController.xib */,
+				2A6389FB2B062D0E007BB425 /* Components */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,13 +166,11 @@
 		2AB23D722B0628E20018AD27 /* TappaTask1 */ = {
 			isa = PBXGroup;
 			children = (
-				2AB23D732B0628E20018AD27 /* AppDelegate.swift */,
-				2AB23D752B0628E20018AD27 /* SceneDelegate.swift */,
-				2A638A002B062ED9007BB425 /* Extensions */,
+				2A638A132B0634E5007BB425 /* App */,
 				2A9186EA2B062BD2000E3AEF /* Modules */,
-				2AB23D7C2B0628E30018AD27 /* Assets.xcassets */,
-				2AB23D7E2B0628E30018AD27 /* LaunchScreen.storyboard */,
-				2AB23D812B0628E30018AD27 /* Info.plist */,
+				2A638A0E2B0630B1007BB425 /* Protocols */,
+				2A638A002B062ED9007BB425 /* Extensions */,
+				2A638A152B06366B007BB425 /* Resources */,
 			);
 			path = TappaTask1;
 			sourceTree = "<group>";
@@ -256,9 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A638A102B0630C0007BB425 /* Coordinator.swift in Sources */,
 				2AB23D742B0628E20018AD27 /* AppDelegate.swift in Sources */,
 				2A9186EE2B062C0E000E3AEF /* WAListViewController.swift in Sources */,
+				2A638A0D2B0630AA007BB425 /* WACoordinator.swift in Sources */,
+				2A638A0A2B062FFE007BB425 /* WAListViewModel.swift in Sources */,
 				2A638A022B062EEE007BB425 /* UITableViewCell+Identifier.swift in Sources */,
+				2A638A122B0631B2007BB425 /* AppCoordinator.swift in Sources */,
 				2AB23D762B0628E20018AD27 /* SceneDelegate.swift in Sources */,
 				2A6389FE2B062D26007BB425 /* WATableViewCell.swift in Sources */,
 			);

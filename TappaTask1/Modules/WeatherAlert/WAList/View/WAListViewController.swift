@@ -8,14 +8,32 @@
 import UIKit
 
 final class WAListViewController: UIViewController {
+    // MARK: - UI components
     @IBOutlet private var tableView: UITableView!
-
+    
+    // MARK: - Private properties
+    private let viewModel: WAListViewModelProtocol
+    
+    // MARK: - Init
+    init(viewModel: WAListViewModelProtocol) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureTableView()
     }
 
+    // MARK: - Configure
     private func configureTableView() {
         tableView.dataSource = self
         
