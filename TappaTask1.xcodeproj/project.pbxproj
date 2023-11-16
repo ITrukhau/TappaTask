@@ -11,6 +11,7 @@
 		2AB23D762B0628E20018AD27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB23D752B0628E20018AD27 /* SceneDelegate.swift */; };
 		2AB23D7D2B0628E30018AD27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB23D7C2B0628E30018AD27 /* Assets.xcassets */; };
 		2AB23D802B0628E30018AD27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB23D7E2B0628E30018AD27 /* LaunchScreen.storyboard */; };
+		355322411E8673F3F9768AF3 /* Pods_TappaTask1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314920C831607D685EE5533 /* Pods_TappaTask1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,9 @@
 		2AB23D7C2B0628E30018AD27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AB23D7F2B0628E30018AD27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AB23D812B0628E30018AD27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E7A10ECBE44E686DBD18EA3 /* Pods-TappaTask1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappaTask1.release.xcconfig"; path = "Target Support Files/Pods-TappaTask1/Pods-TappaTask1.release.xcconfig"; sourceTree = "<group>"; };
+		62A51FE53C1AE48A2D6AB955 /* Pods-TappaTask1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappaTask1.debug.xcconfig"; path = "Target Support Files/Pods-TappaTask1/Pods-TappaTask1.debug.xcconfig"; sourceTree = "<group>"; };
+		8314920C831607D685EE5533 /* Pods_TappaTask1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TappaTask1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355322411E8673F3F9768AF3 /* Pods_TappaTask1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,8 @@
 			children = (
 				2AB23D722B0628E20018AD27 /* TappaTask1 */,
 				2AB23D712B0628E20018AD27 /* Products */,
+				3DB232F649C761B5DAD58E88 /* Pods */,
+				7C960C0B6A2C5AFE361332B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +68,23 @@
 			path = TappaTask1;
 			sourceTree = "<group>";
 		};
+		3DB232F649C761B5DAD58E88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62A51FE53C1AE48A2D6AB955 /* Pods-TappaTask1.debug.xcconfig */,
+				4E7A10ECBE44E686DBD18EA3 /* Pods-TappaTask1.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C960C0B6A2C5AFE361332B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8314920C831607D685EE5533 /* Pods_TappaTask1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AB23D842B0628E30018AD27 /* Build configuration list for PBXNativeTarget "TappaTask1" */;
 			buildPhases = (
+				CE78654DCD685A55B1C1BDF7 /* [CP] Check Pods Manifest.lock */,
 				2AB23D6C2B0628E20018AD27 /* Sources */,
 				2AB23D6D2B0628E20018AD27 /* Frameworks */,
 				2AB23D6E2B0628E20018AD27 /* Resources */,
+				68F4019F9A9B645D86BA43CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +151,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68F4019F9A9B645D86BA43CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TappaTask1/Pods-TappaTask1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TappaTask1/Pods-TappaTask1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TappaTask1/Pods-TappaTask1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE78654DCD685A55B1C1BDF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TappaTask1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AB23D6C2B0628E20018AD27 /* Sources */ = {
@@ -187,7 +255,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -250,7 +318,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -271,12 +339,14 @@
 		};
 		2AB23D852B0628E30018AD27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62A51FE53C1AE48A2D6AB955 /* Pods-TappaTask1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 89V63Y7M5L;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TappaTask1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -298,12 +368,14 @@
 		};
 		2AB23D862B0628E30018AD27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E7A10ECBE44E686DBD18EA3 /* Pods-TappaTask1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 89V63Y7M5L;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TappaTask1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
