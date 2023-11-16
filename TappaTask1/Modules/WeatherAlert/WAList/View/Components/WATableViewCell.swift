@@ -7,23 +7,48 @@
 
 import UIKit
 
-class WATableViewCell: UITableViewCell {
+final class WATableViewCell: UITableViewCell {
     @IBOutlet private var randomImageView: UIImageView!
-
+    
     @IBOutlet private var nameLabel: UILabel!
     @IBOutlet private var startDateLabel: UILabel!
     @IBOutlet private var endDateLabel: UILabel!
     @IBOutlet private var senderName: UILabel!
     @IBOutlet private var durationLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(with weatherAlert: WeatherAlert) {
+        let properties = weatherAlert.properties
+        
+        nameLabel.text = properties.event
+        senderName.text = properties.senderName
+        
+        let dateFormatter = ISO8601DateFormatter()
+        let startDateString = properties.effective ?? "N/A"
+        let startDate = dateFormatter.date(from: startDateString)
+        let endDateString = properties.ends ?? "N/A"
+        let endDate = dateFormatter.date(from: endDateString)
+        
+        startDateLabel.text = "Starts: \(formatDate(startDate))"
+        endDateLabel.text = "Ends: \(formatDate(endDate))"
+        durationLabel.text = "Duration: \(formatDuration(startDate: startDate, endDate: endDate))"
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func formatDuration(startDate: Date?, endDate: Date?) -> String {
+        guard let startDate, let endDate else { return "N/A" }
+        
+        let interval = endDate.timeIntervalSince(startDate)
+        
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .abbreviated
+        formatter.allowedUnits = [.day, .hour, .minute]
+        return formatter.string(from: interval) ?? "N/A"
+    }
+    
+    private func formatDate(_ date: Date?) -> String {
+        guard let date = date else { return "N/A" }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        return dateFormatter.string(from: date)
     }
 }

@@ -14,6 +14,10 @@
 		2A638A0D2B0630AA007BB425 /* WACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A0C2B0630AA007BB425 /* WACoordinator.swift */; };
 		2A638A102B0630C0007BB425 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A0F2B0630C0007BB425 /* Coordinator.swift */; };
 		2A638A122B0631B2007BB425 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A112B0631B2007BB425 /* AppCoordinator.swift */; };
+		2A638A182B0636CC007BB425 /* WANetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A172B0636CC007BB425 /* WANetworkService.swift */; };
+		2A638A1A2B063825007BB425 /* WANetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A192B063825007BB425 /* WANetworkProvider.swift */; };
+		2A638A1D2B063AC9007BB425 /* WAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A1C2B063AC9007BB425 /* WAModel.swift */; };
+		2A638A252B063B5B007BB425 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A242B063B5B007BB425 /* Box.swift */; };
 		2A9186EE2B062C0E000E3AEF /* WAListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9186EC2B062C0E000E3AEF /* WAListViewController.swift */; };
 		2A9186EF2B062C0E000E3AEF /* WAListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A9186ED2B062C0E000E3AEF /* WAListViewController.xib */; };
 		2AB23D742B0628E20018AD27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB23D732B0628E20018AD27 /* AppDelegate.swift */; };
@@ -31,6 +35,10 @@
 		2A638A0C2B0630AA007BB425 /* WACoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACoordinator.swift; sourceTree = "<group>"; };
 		2A638A0F2B0630C0007BB425 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2A638A112B0631B2007BB425 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2A638A172B0636CC007BB425 /* WANetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WANetworkService.swift; sourceTree = "<group>"; };
+		2A638A192B063825007BB425 /* WANetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WANetworkProvider.swift; sourceTree = "<group>"; };
+		2A638A1C2B063AC9007BB425 /* WAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAModel.swift; sourceTree = "<group>"; };
+		2A638A242B063B5B007BB425 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		2A9186EC2B062C0E000E3AEF /* WAListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAListViewController.swift; sourceTree = "<group>"; };
 		2A9186ED2B062C0E000E3AEF /* WAListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WAListViewController.xib; sourceTree = "<group>"; };
 		2AB23D702B0628E20018AD27 /* TappaTask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TappaTask1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +94,7 @@
 			children = (
 				2A638A082B062FEE007BB425 /* ViewModel */,
 				2A9186F02B062C21000E3AEF /* View */,
+				2A638A1C2B063AC9007BB425 /* WAModel.swift */,
 			);
 			path = WAList;
 			sourceTree = "<group>";
@@ -116,6 +125,31 @@
 				2AB23D812B0628E30018AD27 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2A638A162B0636B3007BB425 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2A638A1B2B0638BC007BB425 /* WANetwork */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2A638A1B2B0638BC007BB425 /* WANetwork */ = {
+			isa = PBXGroup;
+			children = (
+				2A638A172B0636CC007BB425 /* WANetworkService.swift */,
+				2A638A192B063825007BB425 /* WANetworkProvider.swift */,
+			);
+			path = WANetwork;
+			sourceTree = "<group>";
+		};
+		2A638A232B063B55007BB425 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2A638A242B063B5B007BB425 /* Box.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		2A9186EA2B062BD2000E3AEF /* Modules */ = {
@@ -168,7 +202,9 @@
 			children = (
 				2A638A132B0634E5007BB425 /* App */,
 				2A9186EA2B062BD2000E3AEF /* Modules */,
+				2A638A162B0636B3007BB425 /* Services */,
 				2A638A0E2B0630B1007BB425 /* Protocols */,
+				2A638A232B063B55007BB425 /* Helpers */,
 				2A638A002B062ED9007BB425 /* Extensions */,
 				2A638A152B06366B007BB425 /* Resources */,
 			);
@@ -310,13 +346,17 @@
 			files = (
 				2A638A102B0630C0007BB425 /* Coordinator.swift in Sources */,
 				2AB23D742B0628E20018AD27 /* AppDelegate.swift in Sources */,
+				2A638A182B0636CC007BB425 /* WANetworkService.swift in Sources */,
 				2A9186EE2B062C0E000E3AEF /* WAListViewController.swift in Sources */,
 				2A638A0D2B0630AA007BB425 /* WACoordinator.swift in Sources */,
 				2A638A0A2B062FFE007BB425 /* WAListViewModel.swift in Sources */,
+				2A638A252B063B5B007BB425 /* Box.swift in Sources */,
 				2A638A022B062EEE007BB425 /* UITableViewCell+Identifier.swift in Sources */,
 				2A638A122B0631B2007BB425 /* AppCoordinator.swift in Sources */,
 				2AB23D762B0628E20018AD27 /* SceneDelegate.swift in Sources */,
+				2A638A1D2B063AC9007BB425 /* WAModel.swift in Sources */,
 				2A6389FE2B062D26007BB425 /* WATableViewCell.swift in Sources */,
+				2A638A1A2B063825007BB425 /* WANetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +504,7 @@
 				DEVELOPMENT_TEAM = 89V63Y7M5L;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TappaTask1/Info.plist;
+				INFOPLIST_FILE = TappaTask1/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -493,7 +533,7 @@
 				DEVELOPMENT_TEAM = 89V63Y7M5L;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TappaTask1/Info.plist;
+				INFOPLIST_FILE = TappaTask1/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

@@ -30,7 +30,10 @@ final class WAListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.loadData()
+        
         configureTableView()
+        configureBindings()
     }
 
     // MARK: - Configure
@@ -39,6 +42,12 @@ final class WAListViewController: UIViewController {
         
         let waNib = UINib(nibName: WATableViewCell.identifier, bundle: nil)
         tableView.register(waNib, forCellReuseIdentifier: WATableViewCell.identifier)
+    }
+    
+    private func configureBindings() {
+        viewModel.dataSource.bind { [weak self] _ in
+            self?.tableView.reloadData()
+        }
     }
 }
 
@@ -50,10 +59,13 @@ extension WAListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        let item = viewModel.dataSource.value[indexPath.row]
+        cell.configure(with: item)
+    
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        viewModel.dataSource.value.count
     }
 }
