@@ -15,7 +15,9 @@ final class WANetworkProvider {
         return MoyaProvider<WANetworkService>(session: session)
     }()
     
-    func getWeatherAlerts(status: String, messageType: String, completion: @escaping (Result<WAListResponse, Error>) -> Void) {
+    func getWeatherAlerts(status: WAStatus,
+                          messageType: WAMessageType,
+                          completion: @escaping (Result<WAListResponse, Error>) -> Void) {
         provider.request(.alert(status: status, messageType: messageType)) { result in
             switch result {
             case let .success(response):

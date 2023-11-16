@@ -18,16 +18,22 @@ final class WAListViewModel: WAListViewModelProtocol {
     private let networkProvider = WANetworkProvider()
     private let randomImageNetworkProvider = RandomImageNetworkProvider()
     
+    private weak var coordinator: WACoordinatorProtocol?
+    
     var dataSource: Box<[WeatherAlert]> = Box([])
     
+    init(coordinator: WACoordinatorProtocol) {
+        self.coordinator = coordinator
+    }
+    
     func loadData() {
-        networkProvider.getWeatherAlerts(status: "actual", messageType: "alert") { result in
+        networkProvider.getWeatherAlerts(status: .actual, messageType: .alert) { result in
             DispatchQueue.main.async { [weak self] in
                 switch result {
                 case .success(let response):
                     self?.dataSource.value = response.features
                 case .failure(let error):
-                    print(error)
+                    self?.coordinator?.showErrorAlert(error)
                 }
             }
         }
@@ -35,13 +41,12 @@ final class WAListViewModel: WAListViewModelProtocol {
     
     func loadImage(for index: Int, completion: @escaping (UIImage?) -> Void) {
         randomImageNetworkProvider.getRandomImage(for: index) { result in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
                 switch result {
                 case .success(let image):
                     completion(image)
                 case .failure(let error):
-                    completion(nil)
-                    print(error)
+                    self?.coordinator?.showErrorAlert(error)
                 }
             }
         }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - WAListResponse
 struct WAListResponse: Codable {
     var features: [WeatherAlert]
     var title: String

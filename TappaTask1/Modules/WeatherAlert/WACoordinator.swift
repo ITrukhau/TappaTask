@@ -7,7 +7,11 @@
 
 import UIKit
 
-final class WACoordinator: Coordinator {
+protocol WACoordinatorProtocol: Coordinator {
+    func showErrorAlert(_ error: Error)
+}
+
+final class WACoordinator: WACoordinatorProtocol {
     var navigationController: UINavigationController
     var children: [Coordinator] = []
     
@@ -18,11 +22,19 @@ final class WACoordinator: Coordinator {
     func start() {
         showWAList()
     }
-    
+        
     // MARK: - Flows
     private func showWAList() {
-        let viewModel = WAListViewModel()
+        let viewModel = WAListViewModel(coordinator: self)
         let controller = WAListViewController(viewModel: viewModel)
         navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func showErrorAlert(_ error: Error) {
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel)
+        alert.addAction(okAction)
+        
+        navigationController.present(alert, animated: true)
     }
 }

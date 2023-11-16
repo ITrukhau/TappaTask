@@ -96,9 +96,9 @@
 		2A638A0B2B063096007BB425 /* WAList */ = {
 			isa = PBXGroup;
 			children = (
-				2A638A082B062FEE007BB425 /* ViewModel */,
+				2A638A2B2B064DC3007BB425 /* Model */,
 				2A9186F02B062C21000E3AEF /* View */,
-				2A638A1C2B063AC9007BB425 /* WAModel.swift */,
+				2A638A082B062FEE007BB425 /* ViewModel */,
 			);
 			path = WAList;
 			sourceTree = "<group>";
@@ -164,6 +164,14 @@
 				2A638A292B0644BB007BB425 /* RandomImageNetworkProvider.swift */,
 			);
 			path = RandomImageNetwork;
+			sourceTree = "<group>";
+		};
+		2A638A2B2B064DC3007BB425 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A638A1C2B063AC9007BB425 /* WAModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2A9186EA2B062BD2000E3AEF /* Modules */ = {

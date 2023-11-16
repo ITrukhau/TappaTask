@@ -8,8 +8,16 @@
 import Foundation
 import Moya
 
+enum WAStatus: String {
+    case actual
+}
+
+enum WAMessageType: String {
+    case alert
+}
+
 enum WANetworkService {
-    case alert(status: String, messageType: String)
+    case alert(status: WAStatus, messageType: WAMessageType)
 }
 
 extension WANetworkService: TargetType {
@@ -38,8 +46,8 @@ extension WANetworkService: TargetType {
     var task: Task {
         switch self {
         case let .alert(status, messageType):
-            let parameters = ["status": status,
-                              "message_type": messageType]
+            let parameters = ["status": status.rawValue,
+                              "message_type": messageType.rawValue]
             return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         }
     }
