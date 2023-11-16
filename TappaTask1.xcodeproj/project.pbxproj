@@ -18,6 +18,8 @@
 		2A638A1A2B063825007BB425 /* WANetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A192B063825007BB425 /* WANetworkProvider.swift */; };
 		2A638A1D2B063AC9007BB425 /* WAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A1C2B063AC9007BB425 /* WAModel.swift */; };
 		2A638A252B063B5B007BB425 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A242B063B5B007BB425 /* Box.swift */; };
+		2A638A282B064446007BB425 /* RandomImageNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A272B064446007BB425 /* RandomImageNetworkService.swift */; };
+		2A638A2A2B0644BB007BB425 /* RandomImageNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A638A292B0644BB007BB425 /* RandomImageNetworkProvider.swift */; };
 		2A9186EE2B062C0E000E3AEF /* WAListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9186EC2B062C0E000E3AEF /* WAListViewController.swift */; };
 		2A9186EF2B062C0E000E3AEF /* WAListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A9186ED2B062C0E000E3AEF /* WAListViewController.xib */; };
 		2AB23D742B0628E20018AD27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB23D732B0628E20018AD27 /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 		2A638A192B063825007BB425 /* WANetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WANetworkProvider.swift; sourceTree = "<group>"; };
 		2A638A1C2B063AC9007BB425 /* WAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAModel.swift; sourceTree = "<group>"; };
 		2A638A242B063B5B007BB425 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		2A638A272B064446007BB425 /* RandomImageNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageNetworkService.swift; sourceTree = "<group>"; };
+		2A638A292B0644BB007BB425 /* RandomImageNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageNetworkProvider.swift; sourceTree = "<group>"; };
 		2A9186EC2B062C0E000E3AEF /* WAListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAListViewController.swift; sourceTree = "<group>"; };
 		2A9186ED2B062C0E000E3AEF /* WAListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WAListViewController.xib; sourceTree = "<group>"; };
 		2AB23D702B0628E20018AD27 /* TappaTask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TappaTask1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,7 @@
 		2A638A162B0636B3007BB425 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2A638A262B064429007BB425 /* RandomImageNetwork */,
 				2A638A1B2B0638BC007BB425 /* WANetwork */,
 			);
 			path = Services;
@@ -150,6 +155,15 @@
 				2A638A242B063B5B007BB425 /* Box.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2A638A262B064429007BB425 /* RandomImageNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				2A638A272B064446007BB425 /* RandomImageNetworkService.swift */,
+				2A638A292B0644BB007BB425 /* RandomImageNetworkProvider.swift */,
+			);
+			path = RandomImageNetwork;
 			sourceTree = "<group>";
 		};
 		2A9186EA2B062BD2000E3AEF /* Modules */ = {
@@ -344,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A638A2A2B0644BB007BB425 /* RandomImageNetworkProvider.swift in Sources */,
 				2A638A102B0630C0007BB425 /* Coordinator.swift in Sources */,
 				2AB23D742B0628E20018AD27 /* AppDelegate.swift in Sources */,
 				2A638A182B0636CC007BB425 /* WANetworkService.swift in Sources */,
@@ -353,6 +368,7 @@
 				2A638A252B063B5B007BB425 /* Box.swift in Sources */,
 				2A638A022B062EEE007BB425 /* UITableViewCell+Identifier.swift in Sources */,
 				2A638A122B0631B2007BB425 /* AppCoordinator.swift in Sources */,
+				2A638A282B064446007BB425 /* RandomImageNetworkService.swift in Sources */,
 				2AB23D762B0628E20018AD27 /* SceneDelegate.swift in Sources */,
 				2A638A1D2B063AC9007BB425 /* WAModel.swift in Sources */,
 				2A6389FE2B062D26007BB425 /* WATableViewCell.swift in Sources */,

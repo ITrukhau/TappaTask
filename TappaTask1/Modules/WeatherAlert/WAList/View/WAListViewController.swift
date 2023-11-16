@@ -62,6 +62,10 @@ extension WAListViewController: UITableViewDataSource {
         let item = viewModel.dataSource.value[indexPath.row]
         cell.configure(with: item)
     
+        viewModel.loadImage(for: indexPath.row) { image in
+            cell.setImage(image)
+        }
+    
         return cell
     }
 
