@@ -33,6 +33,22 @@ final class WATableViewCell: UITableViewCell {
         durationLabel.text = "Duration: \(formatDuration(startDate: startDate, endDate: endDate))"
     }
     
+    func setImage(_ image: UIImage?) {
+        randomImageView.image = image
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        randomImageView.image = nil
+        nameLabel.text = nil
+        startDateLabel.text = nil
+        endDateLabel.text = nil
+        senderName.text = nil
+        durationLabel.text = nil
+    }
+    
+    // MARK: - Date formatting
     private func formatDuration(startDate: Date?, endDate: Date?) -> String {
         guard let startDate, let endDate else { return "N/A" }
         

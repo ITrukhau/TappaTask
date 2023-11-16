@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zke-3M-BD9">
-                        <rect key="frame" x="240" y="0.0" width="80" height="80"/>
+                        <rect key="frame" x="220" y="20" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="9Z7-HK-BMh"/>
                             <constraint firstAttribute="height" constant="80" id="Gwp-Ww-Lf6"/>
@@ -61,10 +61,10 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="zke-3M-BD9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8ul-Of-OAR"/>
+                    <constraint firstItem="zke-3M-BD9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="8ul-Of-OAR"/>
                     <constraint firstAttribute="trailing" secondItem="513-Qx-sfU" secondAttribute="trailing" constant="14" id="CtK-6Z-77v"/>
                     <constraint firstItem="jUd-77-0zZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="E91-zM-y2C"/>
-                    <constraint firstAttribute="trailing" secondItem="zke-3M-BD9" secondAttribute="trailing" id="bXZ-lH-9Pc"/>
+                    <constraint firstAttribute="trailing" secondItem="zke-3M-BD9" secondAttribute="trailing" constant="20" id="bXZ-lH-9Pc"/>
                     <constraint firstItem="jUd-77-0zZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ekv-rd-3Uk"/>
                     <constraint firstAttribute="bottom" secondItem="jUd-77-0zZ" secondAttribute="bottom" constant="20" id="fjW-BQ-FYn"/>
                     <constraint firstItem="513-Qx-sfU" firstAttribute="bottom" secondItem="iSu-af-wQy" secondAttribute="bottom" id="mYW-TL-CwJ"/>
